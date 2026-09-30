@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Group</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+    }
+
+    body {
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <img
+    id="mainImage"
+    src="レビューキャンペーン.jpg"
+    alt="Lab Group 口コミキャンペーン"
+  >
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+
+    if (params.get("page") === "chukan") {
+      document.getElementById("mainImage").src =
+        "chukan-shori.jpg";
+
+      document.getElementById("mainImage").alt =
+        "まつ毛パーマの中間処理について";
+    }
+  </script>
+
+</body>
+</html>
